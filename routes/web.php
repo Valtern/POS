@@ -20,11 +20,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 Route::prefix('category')->group(function () {
-    Route::get('/{category', [ProductsController::class, 'category']);
+    Route::get('{category}', [ProductsController::class, 'category']);
 });
 
-Route::get('/user{id}/name{name}', [UserController::class, 'profile']);
+Route::get('user/{id}/name/{name}', [UserController::class, 'profile']);
 
-Route::get('/sales', [SalesController::class, 'index']);
+Route::get('sales', [SalesController::class, 'index']);
 
 
